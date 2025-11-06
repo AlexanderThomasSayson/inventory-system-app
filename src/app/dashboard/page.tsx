@@ -1,6 +1,6 @@
-import Card from "./components/Card";
-import TopProducts from "./components/TopProducts";
-import ActivityList from "./components/ActivityList";
+import Card from "../components/Card";
+import TopProducts from "../components/TopProducts";
+import ActivityList from "../components/ActivityList";
 
 export default function DashboardPage() {
   return (
