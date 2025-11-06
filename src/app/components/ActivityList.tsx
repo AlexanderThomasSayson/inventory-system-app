@@ -43,13 +43,13 @@ const statusColor = {
 
 export default function ActivityList() {
   return (
-    <div className="bg-white border rounded-xl p-4 flex flex-col">
+    <div className="bg-white border border-gray-200 rounded-xl p-4 flex flex-col">
       <h2 className="text-md font-semibold mb-3">Recent Activity</h2>
       <ul className="space-y-3">
         {activities.map((a, i) => (
           <li
             key={i}
-            className="flex justify-between items-start border-b pb-2 last:border-none"
+            className="flex justify-between items-start border-b border-gray-100 pb-2 last:border-none"
           >
             <div className="flex items-start gap-3">
               <span
