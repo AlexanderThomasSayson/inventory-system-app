@@ -1,5 +1,5 @@
 "use client";
-
+import { FaRegUserCircle } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
@@ -11,6 +11,7 @@ import {
   Settings,
 } from "lucide-react";
 import Link from "next/link";
+import { useMemo } from "react";
 
 const menu = [
   { name: "Dashboard", href: "/", icon: LayoutDashboard },
@@ -25,6 +26,17 @@ const menu = [
 
 export default function Sidebar() {
   const pathname = usePathname();
+
+  const user = { name: "John Doe", role: "Admin" };
+
+  // Automatically get initials (e.g., "John Doe" → "JD")
+  const initials = useMemo(() => {
+    return user.name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase();
+  }, [user.name]);
 
   return (
     <aside className="w-64 bg-white border-r border-gray-200 flex flex-col">
@@ -54,9 +66,20 @@ export default function Sidebar() {
         })}
       </nav>
       <div className="p-4 border-t border-gray-200 text-sm text-gray-600">
-        John Doe
-        <br />
-        <span className="text-gray-400">Admin</span>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            {/* Profile Circle with Initials */}
+            <div className="flex items-center justify-center w-9 h-9 rounded-full bg-blue-200 text-blue-500 font-semibold">
+              {initials}
+            </div>
+
+            {/* User Info */}
+            <div>
+              <div className="font-medium text-gray-800">{user.name}</div>
+              <span className="text-gray-400 text-xs">{user.role}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </aside>
   );
