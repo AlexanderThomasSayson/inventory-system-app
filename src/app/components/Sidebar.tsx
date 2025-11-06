@@ -27,7 +27,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-64 bg-white border-r flex flex-col">
+    <aside className="w-64 bg-white border-r border-gray-200 flex flex-col">
       <div className="p-6 text-xl font-bold">Inventory Pro</div>
       <nav className="flex-1 space-y-1">
         {menu.map((item) => {
@@ -47,7 +47,7 @@ export default function Sidebar() {
           );
         })}
       </nav>
-      <div className="p-4 border-t text-sm text-gray-600">
+      <div className="p-4 border-t border-gray-200 text-sm text-gray-600">
         John Doe
         <br />
         <span className="text-gray-400">Admin</span>
