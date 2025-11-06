@@ -28,7 +28,11 @@ export default function Sidebar() {
 
   return (
     <aside className="w-64 bg-white border-r border-gray-200 flex flex-col">
-      <div className="p-6 text-xl font-bold">Inventory Pro</div>
+      <div className="p-4 sm:p-6 lg:p-8 text-lg sm:text-xl lg:text-2xl font-bold border-b border-gray-200 pb-8 sm:pb-10">
+        Inventory Pro
+        <p className="text-sm text-gray-500">Management System</p>
+      </div>
+
       <nav className="flex-1 space-y-1">
         {menu.map((item) => {
           const Icon = item.icon;
