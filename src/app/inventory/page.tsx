@@ -1,22 +1,20 @@
-import Card from "./components/Card";
-import TopProducts from "./components/TopProducts";
-import ActivityList from "./components/ActivityList";
+import Card from "../components/Card";
+import ProductTable from "../components/ProductTable";
 import { PiPackageThin } from "react-icons/pi";
 import { LuDollarSign } from "react-icons/lu";
 import { CiWarning } from "react-icons/ci";
 import { BsGraphUpArrow } from "react-icons/bs";
 
-export default function DashboardPage() {
+export default function InventoryPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-xl font-semibold">Dashboard Overview</h1>
+        <h1 className="text-xl font-semibold">Inventory Management</h1>
         <p className="text-sm text-gray-500">
-          View your business metrics at a glance
+          Manage your products and stock levels
         </p>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 ">
         <Card
           title="Total Products"
           icon={<PiPackageThin />}
@@ -42,11 +40,7 @@ export default function DashboardPage() {
           trend="+15%"
         />
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <ActivityList />
-        <TopProducts />
-      </div>
+      <ProductTable />
     </div>
   );
 }
