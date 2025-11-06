@@ -17,10 +17,10 @@ const menu = [
   { name: "Inventory", href: "/inventory", icon: Package },
   { name: "Sales", href: "/sales", icon: BarChart2 },
   { name: "Analytics", href: "/analytics", icon: TrendingUp },
-  { name: "Customers", href: "#", icon: Users },
-  { name: "Reports", href: "#", icon: FileText },
-  { name: "Forecast", href: "#", icon: TrendingUp },
-  { name: "Settings", href: "#", icon: Settings },
+  { name: "Customers", href: "/customers", icon: Users },
+  { name: "Reports", href: "/reports", icon: FileText },
+  { name: "Forecast", href: "/forecast", icon: TrendingUp },
+  { name: "Settings", href: "/settings", icon: Settings },
 ];
 
 export default function Sidebar() {
