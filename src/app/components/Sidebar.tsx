@@ -15,7 +15,7 @@ import Link from "next/link";
 const menu = [
   { name: "Dashboard", href: "/", icon: LayoutDashboard },
   { name: "Inventory", href: "/inventory", icon: Package },
-  { name: "Sales", href: "#", icon: BarChart2 },
+  { name: "Sales", href: "/sales", icon: BarChart2 },
   { name: "Analytics", href: "#", icon: TrendingUp },
   { name: "Customers", href: "#", icon: Users },
   { name: "Reports", href: "#", icon: FileText },
@@ -41,8 +41,10 @@ export default function Sidebar() {
             <Link
               key={item.name}
               href={item.href}
-              className={`flex items-center gap-3 px-5 py-2 text-sm hover:bg-gray-100 ${
-                active ? "bg-gray-100 font-medium" : ""
+              className={`flex items-center gap-3 px-5 py-2 text-sm transition-colors duration-150 ${
+                active
+                  ? "bg-blue-100 text-blue-500 font-medium hover:bg-blue-100"
+                  : "text-gray-600 hover:bg-gray-100"
               }`}
             >
               <Icon size={18} />
